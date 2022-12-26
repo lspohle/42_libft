@@ -1,5 +1,5 @@
 # The first project of the core curriculum - libft
-Libft is the first project of the core curriculum of the [42 network](https://42wolfsburg.de). The project is about coding your own C library. It contains various general purpose functions.
+Libft is the first project of the core curriculum of the [42](https://42wolfsburg.de) network. The project is about coding your own C library. It contains various general purpose functions.
 
 ## Part 1: libc functions
     int     ft_isalpha(int c);
