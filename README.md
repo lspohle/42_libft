@@ -71,7 +71,7 @@ This directory might be even more interesting for you. It is a test program for 
     6. Compile by using the command 'gcc -Wall -Werror -Wextra main.c test.a your_library.a' and execute.
     7. If you run the program, it'll ask you for a function to test ("Function: "). You need to enter the function, you'd like to test ('bzero' or 'isalpha'). You can also test multiple function at once by referring to them ('libc' or 'additional' or 'bonus' or 'all').
 
-### Resources and recommendations
+### Specific resources
 While coding, I found various resources that helped me a lot to dive deeper into C and understand the concept of specific functions.
 
     You'll find those resources in the sorce file of the function you're looking for
@@ -82,6 +82,7 @@ While coding, I found various resources that helped me a lot to dive deeper into
 - [Struct](https://www.youtube.com/watch?v=dqa0KMSMx2w)
 - [Linked lists](https://www.youtube.com/watch?v=VOpjAHCee7c)
 
+### Recommendations for libft
 I'd recommend you to start your project with coding a few libc functions and contiue with creating your Makefile as well as your headerfile. If you write those two files in the beginning, you don't have to handle such a big amount of functions. Moreover, it's worth it to do the bonus as well because you'll need the concept of structs and linked lists later anyway. Don't stress yourself. You still need to enjoy coding. Therefore, I'd recommend you to write your own test program. It reinforces what you've learned, and I made the experience that it was the part I had the most fun with while working on libft.
     
 # Contacting me
