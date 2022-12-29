@@ -60,7 +60,7 @@ As the name suggests, libft_functions contains all the functions I wrote as part
     5. Refer to the library by adding '#include "libft.h"' at the top of the file where your sorce code is written.
     6. Compile by using the command 'gcc -Wall -Werror -Wextra your_file.c libft.a' and execute.
 
-## The second directory: [libft_test_program](https://github.com/lspohle/libft/tree/main/libft_test_program)
+## The second directory: [testernette](https://github.com/lspohle/libft/tree/main/libft_test_program)
 This directory might be even more interesting for you. It is a test program for your own libft project. While I worked on libft, I used a test program I installed from the Internet. It works perfectly fine and increased my awareness of error handling. But I wanted to expand my horizon and, therefore, I wrote my own test program. Even though, it was not required to write your own test program for libft, I genuily enjoyed it and learned a lot while writing it. It works great as a basic test program and has a clean structure. Caution: It might not check for memory leaks, for instance, or whether you allocated more than the nessecariy amount of bytes on the heap.
 
     1. Git clone the current repository into a directory on your device.
