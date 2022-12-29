@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat_test.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:25:27 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 08:25:28 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "test.h"
 #include "libft.h"
 
@@ -17,7 +29,7 @@ void	ft_strlcat_test(void)
     char    dst5[] = "42";
     char    dst6[] = "42";
     size_t  dstsize56 = 1;
-    
+
     // Test 1
     if (strlcat(dst1, src, dstsize12) == ft_strlcat(dst2, src, dstsize12)) // dstsize >= ft_strlen(dst) + ft_strlen(src)
     	test_successful(test);

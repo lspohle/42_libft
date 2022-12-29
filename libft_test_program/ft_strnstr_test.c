@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr_test.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:25:41 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 08:25:42 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "test.h"
 #include "libft.h"
 
@@ -6,7 +18,7 @@ void	ft_strnstr_test(void)
     test_headline("ft_strnstr.c");
 
     int test = 1;
-    
+
     // Test 1
     if (strnstr("42Wolfsburg", "Wolf", ft_strlen("42Wolfsburg")) == ft_strnstr("42Wolfsburg", "Wolf", ft_strlen("42Wolfsburg"))) // basic input (first occurrence)
     	test_successful(test);

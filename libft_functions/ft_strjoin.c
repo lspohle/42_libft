@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 07:34:35 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/19 07:34:36 by lspohle          ###   ########.fr       */
+/*   Updated: 2022/12/29 08:32:13 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int		j;
 	char	*output;
 
-    if (s1 == NULL && s2 == NULL)
-        return (NULL);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	output = (char *) malloc ((ft_strlen(s1)+ft_strlen(s2)+1) * sizeof(char));
 	if (!output)
 		return (0);

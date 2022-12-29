@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii_test.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:24:12 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 08:24:13 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "test.h"
 #include "libft.h"
 
@@ -6,7 +18,7 @@ void	ft_isascii_test(void)
     test_headline("ft_isascii.c");
 
     int test = 1;
-    
+
     // Test 1
 	if (isascii('a') == ft_isascii('a'))
 		test_successful(test);

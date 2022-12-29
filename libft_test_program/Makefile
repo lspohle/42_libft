@@ -5,11 +5,11 @@ SRCS		= test_headline.c test_successful.c test_failed.c ft_atoi_test.c ft_bzero_
 			  ft_isdigit_test.c ft_isprint_test.c ft_itoa_test.c ft_memchr_test.c ft_memcmp_test.c \
 			  ft_memcpy_test.c ft_memmove_test.c ft_memset_test.c ft_putchar_fd_test.c ft_putendl_fd_test.c \
 			  ft_putnbr_fd_test.c ft_putstr_fd_test.c ft_split_test.c ft_strchr_test.c ft_strdup_test.c \
-			  ft_strdup_test.c ft_strjoin_test.c ft_strlcat_test.c ft_strlcpy_test.c ft_strlen_test.c \
+			  ft_strjoin_test.c ft_strlcat_test.c ft_strlcpy_test.c ft_strlen_test.c \
 			  ft_strncmp_test.c ft_strnstr_test.c ft_strrchr_test.c ft_strtrim_test.c ft_substr_test.c \
 			  ft_tolower_test.c ft_toupper_test.c ft_strmapi_test.c ft_striteri_test.c
 
-BSRCS		= ft_lstadd_back_test.c ft_lstadd_front_test.c ft_lstsize_test.c ft_lstnew_test.c
+BSRCS		= ft_lstadd_back_test.c ft_lstadd_front_test.c ft_lstsize_test.c ft_lstnew_test.c ft_lstmap_test.c \
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -23,7 +23,9 @@ AR			= ar -r
 
 RM			= rm -f
 
-${NAME}:	${OBJS}
+${LIBFT_A}:	cd ../libft_functions && ${MAKE}
+
+${NAME}:	${OBJS} ${LIBFT_A}
 			${AR} ${NAME} ${OBJS}
 
 ${OBJS}:	${SRCS}
@@ -32,7 +34,8 @@ ${OBJS}:	${SRCS}
 ${BOBJS}:	${BSRCS}
 			${GCC} ${CFLAGS} -c ${BSRCS} ${SRCS}
 
-all:		${NAME}
+all:		test
+			${NAME}
 
 bonus:		${BOBJS} ${OBJS}
 			${AR} ${NAME} ${BOBJS} ${OBJS}
@@ -42,7 +45,15 @@ clean:
 
 fclean:		clean
 			${RM} ${NAME}
+			cd ../libft_functions && ${MAKE} -s fclean
 
-re:			fclean all
+re:			fclean test
+
+test:
+			norminette ../libft_functions
+			echo "\n"
+			${MAKE} -s bonus
+			cd ../libft_functions && ${MAKE} -s fclean ${MAKE} -s bonus
+			${GCC} ${CFLAGS} test.a ../libft_functions/libft.a main.c -o executable && echo "\n" && ./executable
 
 .PHONY:		all clean fclean re bonus

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back_test.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:24:25 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 08:24:26 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "test.h"
 #include "libft.h"
 
@@ -23,7 +35,7 @@ void	ft_lstadd_back_test(void)
     t_list  *lst_check;
     t_list  *lst_test;
 
-    // Initialising lst_check 
+    // Initialising lst_check
     // The modified linked list lst_test shall look the same
     tmp = ft_lstnew("Four");
 	lst_check = tmp;

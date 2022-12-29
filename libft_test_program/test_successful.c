@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test_successful.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:26:19 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 08:26:20 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "test.h"
 
 void    test_successful(int test)
@@ -5,7 +17,7 @@ void    test_successful(int test)
     printf("	\033[0;32mTest %d: OK\033[0m\n", test);
 }
 
-// Creating alias: https://wpbeaches.com/make-an-alias-in-bash-or-zsh-shell-in-macos-with-terminal/ 
+// Creating alias: https://wpbeaches.com/make-an-alias-in-bash-or-zsh-shell-in-macos-with-terminal/
 //                 -> nano ~/.zshrc
 //                 -> alias gccw='gcc -Wall -Werror -Wextra'
 //                 -> control+o and enter and control+x

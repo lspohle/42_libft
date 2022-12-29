@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/29 08:26:24 by lspohle           #+#    #+#             */
+/*   Updated: 2022/12/29 16:10:19 by lspohle          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TEST_H
 # define TEST_H
 # include <stdio.h> // e.g. printf(), scanf(), getc(), fopen()
@@ -62,5 +74,6 @@ void	        ft_lstadd_front_test(void);
 void	        ft_lstsize_test(void);
 // // // void	ft_lstlast_test(void);
 void	        ft_lstadd_back_test(void);
+void			ft_lstmap_test(void);
 
 #endif

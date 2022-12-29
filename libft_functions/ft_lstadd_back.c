@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 13:25:49 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/21 14:45:54 by lspohle          ###   ########.fr       */
+/*   Updated: 2022/12/29 13:54:31 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,17 @@
 //  -> return: none
 
 #include "libft.h"
-#include <stdio.h>
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *tmp;
-
-    if (*lst == NULL)
-        ft_lstadd_front(lst, new);
+	if (*lst == NULL)
+		*lst = new;
 	else if (new != NULL)
-	{
-		tmp = ft_lstlast(*lst);
-		while (tmp != NULL && *lst != NULL)
-		{
-			tmp->next = new;
-			new->next = NULL;
-			tmp = new->next;
-		}
-	}
+		ft_lstlast(*lst)->next = new;
 }
 
 // #include "libft.h"
-// #include <stdio.h> 
+// #include <stdio.h>
 
 // static void ft_print_nodes(t_list *lst)
 // {
