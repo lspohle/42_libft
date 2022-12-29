@@ -61,15 +61,16 @@ As the name suggests, libft_functions contains all the functions I wrote as part
     6. Compile by using the command 'gcc -Wall -Werror -Wextra your_file.c libft.a' and execute.
 
 ## The second directory: [libft_test_program](https://github.com/lspohle/libft/tree/main/libft_test_program)
-This directory might be even more interesting for you. It is a test program for your own libft project. While I worked on libft, I used a test program I installed from the Internet. It works perfectly fine and increased my awareness of error handling. But I wanted to expand my horizon and, therefore, I wrote my own test program. Even though, it was not required to write your own test program for libft, I genuily enjoyed it and learned a lot while writing it. It works great as a basic test program and has a clean structure. Caution: It might not check for memory leaks, for instance, or whether you allocated more than the nessecariy amount of bytes on the heap.
+This directory might be even more interesting for you. It is a test program for your own libft project. While I worked on libft, I used a test program I installed from the Internet. It works perfectly fine and increased my awareness of error handling. But I wanted to expand my horizon and, therefore, I wrote my own test program. Even though, it was not required to write your own test program for libft, I genuily enjoyed it and learned a lot while writing it. It works great as a basic test program and has a clean structure. It also checks norminette. Caution: It might not check for memory leaks, for instance, or whether you allocated more than the nessecariy amount of bytes on the heap.
 
-    1. Git clone the current repository (you need to generate an SSH Key in advance to be able to git clone) into a directory on your device.
-    2. Go into the directory libft_test_program with your terminal.
-    3. Open the test files in which file descriptors are used (ft_putchar_fd_test.c, ft_putendl_fd_test.c, ft_putnbr_fd_test.c and ft_putstr_fd_test.c) and adjust the path you refer to while using open(), for instance)
-    4. Enter the command 'make' in order to create the archive test.a.
-    5. Copy the directory txt_files, the headerfile test.h, the archive test.a and the sorce file main.c into the directory you'd like to use the test program in.
-    6. Compile by using the command 'gcc -Wall -Werror -Wextra main.c test.a your_library.a' and execute.
-    7. If you run the program, it'll ask you for a function to test ("Function: "). You need to enter the function, you'd like to test ('bzero' or 'isalpha'). You can also test multiple function at once by referring to them ('libc' or 'additional' or 'bonus' or 'all').
+    1. Git clone the current repository into a directory on your device.
+    2. If you wish to test your own functions with testernette, please replace the function in the "libft_functions" directory with your own.
+    3. Enter the command 'bash script.sh' to create an alias.
+    4. Just enter 'testernette' and the program runs.
+
+    Attention:
+        - If you use a different compiler than 'gcc' in your Makefile, please replace your Makefile by the existing Makefile.
+        - If the directory in which your functions are stored is called differently than "libft_functions", please adjust the Makefile of testernette appropriatly (See picture below).
 
 ### Specific resources
 While coding, I found various resources that helped me a lot to dive deeper into C and understand the concept of specific functions.
