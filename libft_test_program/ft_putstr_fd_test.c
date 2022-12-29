@@ -45,7 +45,7 @@ static test_results ft_compare_files(FILE *fileCheck, FILE *fileTest)
             if (test == '\n' && check != '\n')
                 check = ft_continue_until_newline_check(fileCheck, check, test);
             // Assuring that the line of fileTest is at the end of itself
-            if (check == '\n' && test != '\n')
+            else if (check == '\n' && test != '\n')
                 test = ft_continue_until_newline_test(fileTest, check, test);
         }
         if (check == '\n' || test == '\n')
@@ -62,7 +62,7 @@ void	ft_putstr_fd_test(void)
 
     int     test = 1;
 
-    int     fd = open("/Users/leaspoehle/Desktop/42/libft/libft_new/intra-uuid-2153df94-6dd7-4f6b-8599-457993d64d94-4592149-lspohle/ft_putstr_fd_test.txt" , O_RDWR);
+    int     fd = open("../txt_files/ft_putstr_fd_test.txt", O_RDWR);
     FILE    *fileCheck;
     FILE    *fileTest;
 
@@ -76,8 +76,8 @@ void	ft_putstr_fd_test(void)
     ft_putstr_fd("\eTest\t", fd); // empty space
 
     // Opening check file and test file
-    fileCheck = fopen("ft_putstr_fd_check.txt", "r");
-    fileTest = fopen("ft_putstr_fd_test.txt", "r");
+    fileCheck = fopen("../txt_files/ft_putstr_fd_check.txt", "r");
+    fileTest = fopen("../txt_files/ft_putstr_fd_test.txt", "r");
     if (fileCheck == NULL || fileTest == NULL)
         exit (0);
 
