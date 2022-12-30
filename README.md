@@ -65,8 +65,8 @@ This directory might be even more interesting for you. It is a test program for 
 
     1. Git clone the current repository into a directory on your device.
     2. If you wish to test your own functions with testernette, please replace the function in the "libft_functions" directory with your own.
-    3. Enter the command 'bash script.sh' to create an alias.
-    4. Just enter 'testernette' and the program runs.
+    3. Go into the directory of testernette and enter the command 'bash script.sh' to create an alias for testernette.
+    4. Just enter 'testernette' and subsequently the program runs.
 
     Attention:
         - If you use a different compiler than 'gcc' in your Makefile, please replace your Makefile by the existing Makefile.
