@@ -70,7 +70,7 @@ This directory might be even more interesting for you. It is a test program for 
 
     Attention:
         - If you use a different compiler than 'gcc' in your Makefile, please replace your Makefile by the existing Makefile.
-        - If the directory in which your functions are stored is called differently than "libft_functions", please adjust the Makefile of testernette appropriatly (See picture below).
+        - If the directory in which your functions are stored is called differently than "libft_functions", please adjust the Makefile of testernette appropriately (See picture below).
 <img width="1044" alt="Screen Shot 2022-12-29 at 5 44 54 PM" src="https://user-images.githubusercontent.com/121381385/209990627-0a758f3a-be20-4cb2-9106-5df787fda64f.png">
 
 ### Specific resources
