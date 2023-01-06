@@ -46,11 +46,8 @@ Libft is the first project of the core curriculum of the [42](https://42wolfsbur
     int     ft_lstsize(t_list *lst);
     t_list  *ft_lstlast(t_list *lst);
     void    ft_lstadd_back(t_list **lst, t_list *new);
-    
-# My repository and your benefit
-In my repository you'll find two directories. 
 
-## The first directory: [libft_functions](https://github.com/lspohle/libft/tree/main/libft_functions)
+# [Libft](https://github.com/lspohle/libft/tree/main/libft_functions)
 As the name suggests, libft_functions contains all the functions I wrote as part of the project libft. In addition to the required functions, it contains a Makefile and a Headerfile which is named libft.h.
 
     1. Git clone the current repository (you need to generate an SSH Key in advance to be able to git clone) into a directory on your device.
@@ -60,16 +57,32 @@ As the name suggests, libft_functions contains all the functions I wrote as part
     5. Refer to the library by adding '#include "libft.h"' at the top of the file where your sorce code is written.
     6. Compile by using the command 'gcc -Wall -Werror -Wextra your_file.c libft.a' and execute.
 
-## The second directory: [libft_test_program](https://github.com/lspohle/libft/tree/main/libft_test_program)
-This directory might be even more interesting for you. It is a test program for your own libft project. While I worked on libft, I used a test program I installed from the Internet. It works perfectly fine and increased my awareness of error handling. But I wanted to expand my horizon and, therefore, I wrote my own test program. Even though, it was not required to write your own test program for libft, I genuily enjoyed it and learned a lot while writing it. It works great as a basic test program and has a clean structure. Caution: It might not check for memory leaks, for instance, or whether you allocated more than the nessecariy amount of bytes on the heap.
+# [Testernette](https://github.com/lspohle/libft/tree/main/libft_test_program)
+This directory might be even more interesting for you. It is a test program for your own libft project. While I worked on libft, I used a [test program](https://github.com/xicodomingues/francinette) I installed from the Internet. It works perfectly fine and increased my awareness of error handling. But I wanted to expand my horizon and, therefore, I wrote my own test program. Even though, it was not required to write your own test program for libft, I genuily enjoyed it and learned a lot while writing it. It works great as a basic test program and has a clean structure. It also checks norminette. Caution: It might not check for memory leaks, for instance, or whether you allocated more than the nessecariy amount of bytes on the heap.
 
-    1. Git clone the current repository (you need to generate an SSH Key in advance to be able to git clone) into a directory on your device.
-    2. Go into the directory libft_test_program with your terminal.
-    3. Open the test files in which file descriptors are used (ft_putchar_fd_test.c, ft_putendl_fd_test.c, ft_putnbr_fd_test.c and ft_putstr_fd_test.c) and adjust the path you refer to while using open(), for instance)
-    4. Enter the command 'make' in order to create the archive test.a.
-    5. Copy the directory txt_files, the headerfile test.h, the archive test.a and the sorce file main.c into the directory you'd like to use the test program in.
-    6. Compile by using the command 'gcc -Wall -Werror -Wextra main.c test.a your_library.a' and execute.
-    7. If you run the program, it'll ask you for a function to test ("Function: "). You need to enter the function, you'd like to test ('bzero' or 'isalpha'). You can also test multiple function at once by referring to them ('libc' or 'additional' or 'bonus' or 'all').
+Git clone the current repository.
+
+     git clone https://github.com/lspohle/ft_printf.git
+       
+Replace the function in the [libft_functions](https://github.com/lspohle/libft/tree/main/libft_functions) with your own.
+  * Makefile
+  * libft.h
+  * *.c
+
+Enter the following command in order to create an alias for [testernette_libft](https://github.com/lspohle/libft/tree/main/testernette).
+
+     bash testernette_libft.sh
+Run testernette by using the alias you created.
+
+     testernette_libft
+If you prefer not having an alias for testernette, enter directly the following command to run testernette.
+
+     make -s re
+
+Attention:
+        - If you use a different compiler than 'gcc' in your Makefile, please replace your Makefile by the existing Makefile.
+        - If the directory in which your functions are stored is called differently than "libft_functions", please adjust the Makefile of testernette appropriately (See picture below).
+<img width="1044" alt="Screen Shot 2022-12-29 at 5 44 54 PM" src="https://user-images.githubusercontent.com/121381385/209990627-0a758f3a-be20-4cb2-9106-5df787fda64f.png">
 
 ### Specific resources
 While coding, I found various resources that helped me a lot to dive deeper into C and understand the concept of specific functions.
