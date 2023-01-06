@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:07 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:08 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:52:05 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 // Assuring that the line of both files is at the end of itself
 static char ft_continue_until_newline_check(FILE *fileCheck, char check, char test)
@@ -68,7 +67,7 @@ static test_results ft_compare_files(FILE *fileCheck, FILE *fileTest)
     return (result);
 }
 
-void	ft_putendl_fd_test(void)
+void	ft_putendl_fd_test(int *value)
 {
     test_headline("ft_putendl_fd.c");
 
@@ -97,28 +96,28 @@ void	ft_putendl_fd_test(void)
     if (result.test1 == 0)
      	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 2
     if (result.test2 == 0)
      	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 3
     if (result.test3 == 0)
      	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 4
     if (result.test4 == 0)
      	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 
     // Closing check and test file (which were opened for comparing their content)
     fclose(fileCheck);

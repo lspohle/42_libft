@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:25 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:24:26 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:53:09 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 static bool    ft_compare_linked_lists(t_list *lst_check, t_list *lst_test)
 {
@@ -25,7 +24,7 @@ static bool    ft_compare_linked_lists(t_list *lst_check, t_list *lst_test)
     return (true);
 }
 
-void	ft_lstadd_back_test(void)
+void	ft_lstadd_back_test(int *value)
 {
 	test_headline("ft_lstadd_back.c");
 
@@ -65,7 +64,7 @@ void	ft_lstadd_back_test(void)
     if (ft_compare_linked_lists(lst_check, lst_test) == true)
         test_successful(test);
     else
-        test_failed(test);
+        test_failed(test, value);
     free(lst_check);
     free(lst_test);
 }

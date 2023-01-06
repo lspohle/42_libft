@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:50 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:24:51 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:52:41 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_memchr_test(void)
+void	ft_memchr_test(int *value)
 {
     test_headline("ft_memchr.c");
 
@@ -30,12 +29,12 @@ void	ft_memchr_test(void)
 	if (memchr(s, c, n) == ft_memchr(s, c, n))
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 2
 	if (memchr(str, d, m) == ft_memchr(str, d, m))
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 }

@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:23:55 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:23:56 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:54:11 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_bzero_test(void)
+void	ft_bzero_test(int *value)
 {
     test_headline("ft_bzero.c");
 
@@ -29,5 +28,5 @@ void	ft_bzero_test(void)
 	if (memcmp(s1, s2, n) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 }

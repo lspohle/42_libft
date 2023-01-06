@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:34 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:35 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:48:33 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 static char	ft_to_uppercase(unsigned int i, char c)
 {
@@ -21,7 +20,7 @@ static char	ft_to_uppercase(unsigned int i, char c)
 	return (c);
 }
 
-void	ft_strmapi_test(void)
+void	ft_strmapi_test(int *value)
 {
     test_headline("ft_strmapi.c");
 
@@ -40,7 +39,7 @@ void	ft_strmapi_test(void)
     if (strncmp(output_test, output_check1, strlen(output_check1)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(output_test);
     test++;
 
@@ -49,7 +48,7 @@ void	ft_strmapi_test(void)
     if (strncmp(output_test, output_check2, strlen(output_check2)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(output_test);
     test++;
 
@@ -58,6 +57,6 @@ void	ft_strmapi_test(void)
     if (strncmp(output_test, output_check3, strlen(output_check3)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(output_test);
 }

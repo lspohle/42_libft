@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:22 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:24:23 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:53:19 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_itoa_test(void)
+void	ft_itoa_test(int *value)
 {
     test_headline("ft_itoa.c");
 
@@ -26,7 +25,7 @@ void	ft_itoa_test(void)
 	if (strncmp(str, "0", sizeof(*str)) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 	free(str);
     test++;
 
@@ -35,7 +34,7 @@ void	ft_itoa_test(void)
 	if (strncmp(str, "-5430", sizeof(*str)) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 	free(str);
     test++;
 
@@ -44,7 +43,7 @@ void	ft_itoa_test(void)
 	if (strncmp(str, "-2147483648", sizeof(*str)) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 	free(str);
     test++;
 
@@ -53,6 +52,6 @@ void	ft_itoa_test(void)
 	if (strncmp(str, "2147483647", sizeof(*str)) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 	free(str);
 }

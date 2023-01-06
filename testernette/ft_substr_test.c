@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:49 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:50 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:47:49 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_substr_test(void)
+void	ft_substr_test(int *value)
 {
     test_headline("ft_substr.c");
 
@@ -27,7 +26,7 @@ void	ft_substr_test(void)
     if (strncmp(sub, "Wolfsburg", strlen(sub)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(sub);
     test++;
 
@@ -36,7 +35,7 @@ void	ft_substr_test(void)
     if (strncmp(sub, "", strlen(sub)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(sub);
     test++;
 
@@ -45,7 +44,7 @@ void	ft_substr_test(void)
     if (strncmp(sub, "", strlen(sub)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(sub);
     test++;
 
@@ -54,6 +53,6 @@ void	ft_substr_test(void)
     if (strncmp(sub, "Wolfsburg", strlen(sub)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(sub);
 }

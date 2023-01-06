@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:20 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:21 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:51:22 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_strdup_test(void)
+void	ft_strdup_test(int *value)
 {
     test_headline("ft_strdup.c");
 
@@ -26,7 +25,7 @@ void	ft_strdup_test(void)
     if (strncmp(copy, "Copy this", strlen("Copy this")) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -35,7 +34,7 @@ void	ft_strdup_test(void)
     if (strncmp(copy, "", strlen("")) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -44,6 +43,6 @@ void	ft_strdup_test(void)
     if (strncmp(copy, NULL, strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
 }

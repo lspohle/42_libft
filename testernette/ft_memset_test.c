@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:59 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:00 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:52:24 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_memset_test(void)
+void	ft_memset_test(int *value)
 {
     test_headline("ft_memset.c");
 
@@ -32,12 +31,12 @@ void	ft_memset_test(void)
 	if (memcmp(memset(b1, c, n), ft_memset(b2, c, n), n) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 2
 	if (memcmp(memset(b3, d, m), ft_memset(b4, d, m), m) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 }

@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:22 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:23 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:51:16 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 static void ft_to_uppercase(unsigned int i, char *c)
 {
@@ -20,7 +19,7 @@ static void ft_to_uppercase(unsigned int i, char *c)
 		*c -= 32;
 }
 
-void	ft_striteri_test(void)
+void	ft_striteri_test(int *value)
 {
     test_headline("ft_striteri.c");
 
@@ -34,7 +33,7 @@ void	ft_striteri_test(void)
     if (strncmp(str, "HELLO WORLD", strlen("HELLO WORLD")) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(str);
     test++;
 
@@ -44,7 +43,7 @@ void	ft_striteri_test(void)
     if (strncmp(str, "\t\n42 WOLFSBURG\r", strlen("\t\n42 WOLFSBURG\r")) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(str);
     test++;
 
@@ -54,6 +53,6 @@ void	ft_striteri_test(void)
     if (strncmp(str, "\t\n", strlen("\t\n")) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(str);
 }

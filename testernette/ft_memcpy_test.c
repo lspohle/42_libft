@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:56 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:24:57 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:52:30 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_memcpy_test(void)
+void	ft_memcpy_test(int *value)
 {
     test_headline("ft_memcpy.c");
 
@@ -28,5 +27,5 @@ void	ft_memcpy_test(void)
 	if (memcmp(memcpy(dst1, src, n), ft_memcpy(dst2, src, n), n) == 0)
 		test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 }

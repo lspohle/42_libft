@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "alias testernette='make -s re'" >> ~/.zshrc
+echo "alias testernette_libft='make -s re'" >> ~/.zshrc
 zsh
 

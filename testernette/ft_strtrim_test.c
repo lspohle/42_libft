@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:46 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:47 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 20:31:08 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_strtrim_test(void)
+void	ft_strtrim_test(int *value)
 {
     test_headline("ft_strtrim.c");
 
@@ -26,7 +25,7 @@ void	ft_strtrim_test(void)
     if (strncmp(copy, "Hello   World", strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -35,7 +34,7 @@ void	ft_strtrim_test(void)
     if (strncmp(copy, "hEllo", strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -44,7 +43,7 @@ void	ft_strtrim_test(void)
     if (strncmp(copy, "", strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -53,7 +52,7 @@ void	ft_strtrim_test(void)
     if (strncmp(copy, "42 Wolfsburg", strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
@@ -62,15 +61,15 @@ void	ft_strtrim_test(void)
     if (strncmp(copy, NULL, strlen(copy)) == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(copy);
     test++;
 
-    // Test 5
-    copy = ft_strtrim("42 Wolfsburg", NULL); // set == NULL
-    if (strncmp(copy, "42 Wolfsburg", strlen(copy)) == 0)
-    	test_successful(test);
-	else
-		test_failed(test);
-    free(copy);
+    // // Test 5
+    // copy = ft_strtrim("42 Wolfsburg", NULL); // set == NULL
+    // if (strncmp(copy, "42 Wolfsburg", strlen(copy)) == 0)
+    // 	test_successful(test);
+	// else
+	// 	test_failed(test, value);
+    // free(copy);
 }

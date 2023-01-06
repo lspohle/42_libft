@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:47 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:24:48 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:41:29 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 static void ft_print_nodes(t_list *lst)
 {
@@ -22,7 +21,7 @@ static void ft_print_nodes(t_list *lst)
 	}
 }
 
-void    ft_lstnew_test(void)
+void    ft_lstnew_test(int *value)
 {
     test_headline("ft_lstnew.c");
 
@@ -32,3 +31,19 @@ void    ft_lstnew_test(void)
     ft_print_nodes(lst);
 	free (lst);
 }
+
+// #include "libft.h"
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char *str = "Hello";
+// 	t_list *tmp;
+// 	tmp = ft_lstnew(str);
+// 	while (tmp != NULL)
+// 	{
+// 		printf("Element: %s\n", tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// 	free (tmp);
+// }

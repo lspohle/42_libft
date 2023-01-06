@@ -6,7 +6,7 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:36:52 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 16:25:31 by lspohle          ###   ########.fr       */
+/*   Updated: 2022/12/29 10:01:18 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	ft_putendl_fd(char *c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 typedef struct s_list // creating an alias for struct -> s_list
 {
-	void			*content;
+	char			*content;
 	struct s_list	*next;
 }					t_list;
 t_list	*ft_lstnew(void *content);

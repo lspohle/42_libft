@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:15 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:16 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:51:35 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_split_test(void)
+void	ft_split_test(int *value)
 {
     test_headline("ft_split.c");
 
@@ -32,7 +31,7 @@ void	ft_split_test(void)
     if (difference_string_by_string == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(result);
     test++;
 
@@ -43,7 +42,7 @@ void	ft_split_test(void)
     if (difference_string_by_string == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(result);
     test++;
 
@@ -54,7 +53,7 @@ void	ft_split_test(void)
     if (difference_string_by_string == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(result);
     test++;
 
@@ -65,7 +64,7 @@ void	ft_split_test(void)
     if (difference_string_by_string == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(result);
     test++;
 
@@ -76,6 +75,6 @@ void	ft_split_test(void)
     if (difference_string_by_string == 0)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     free(result);
 }

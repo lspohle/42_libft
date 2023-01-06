@@ -6,14 +6,13 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:25:27 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 08:25:28 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:49:23 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
-void	ft_strlcat_test(void)
+void	ft_strlcat_test(int *value)
 {
     test_headline("ft_strlcat.c");
 
@@ -34,19 +33,19 @@ void	ft_strlcat_test(void)
     if (strlcat(dst1, src, dstsize12) == ft_strlcat(dst2, src, dstsize12)) // dstsize >= ft_strlen(dst) + ft_strlen(src)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 2
     if (strlcat(dst3, src, dstsize34) == ft_strlcat(dst4, src, dstsize34)) // dstsize < ft_strlen(dst) + ft_strlen(src)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
     test++;
 
     // Test 3
     if (strlcat(dst5, src, dstsize56) == ft_strlcat(dst6, src, dstsize56)) // dstsize < ft_strlen(dst)
     	test_successful(test);
 	else
-		test_failed(test);
+		test_failed(test, value);
 }

@@ -6,12 +6,11 @@
 /*   By: lspohle <lspohle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 08:24:40 by lspohle           #+#    #+#             */
-/*   Updated: 2022/12/29 16:27:23 by lspohle          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:52:54 by lspohle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
-#include "libft.h"
 
 // Function which is applied to the list
 static void	*ft_iterate_on_the_list(void *content)
@@ -45,7 +44,7 @@ static bool    ft_compare_linked_lists(t_list *lst_check, t_list *lst_test)
 }
 
 // The test function
-void	ft_lstmap_test(void)
+void	ft_lstmap_test(int *value)
 {
 	test_headline("ft_lstmap.c");
 
@@ -73,11 +72,11 @@ void	ft_lstmap_test(void)
 	// Initialising lst_check
     // The linked list which is created by ft_lstmap
 	lst_check = ft_lstmap(lst_test, ft_iterate_on_the_list, ft_free_content);
-	
+
     if (ft_compare_linked_lists(lst_check, lst_test) == true)
         test_successful(test);
     else
-        test_failed(test);
+        test_failed(test, value);
     free(lst_check);
     free(lst_test);
 }
