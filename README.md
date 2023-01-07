@@ -62,7 +62,7 @@ This directory might be even more interesting for you. It is a test program for 
 
 Git clone the current repository.
 
-     git clone https://github.com/lspohle/ft_printf.git
+     git clone https://github.com/lspohle/libft.git
        
 Replace the function in the [libft_functions](https://github.com/lspohle/libft/tree/main/libft_functions) with your own.
   * Makefile
