@@ -47,7 +47,7 @@ Libft is the first project of the core curriculum of the [42](https://42wolfsbur
     t_list  *ft_lstlast(t_list *lst);
     void    ft_lstadd_back(t_list **lst, t_list *new);
 
-# [Libft](https://github.com/lspohle/libft/tree/main/libft_functions)
+# The libft library
 As the name suggests, libft_functions contains all the functions I wrote as part of the project libft. In addition to the required functions, it contains a Makefile and a Headerfile which is named libft.h.
 
     1. Git clone the current repository (you need to generate an SSH Key in advance to be able to git clone) into a directory on your device.
