@@ -1,6 +1,8 @@
 # The first project of the core curriculum - libft
 Libft is the first project of the core curriculum of the [42](https://42wolfsburg.de) network. The project is about coding your own C library. It contains various general purpose functions.
 
+## Note that I wrote [Testernette](https://github.com/lspohle/PRIVATE_testernette_42) for `libft`.
+
 ## Part 1: libc functions
     int     ft_isalpha(int c);
     int     ft_isdigit(int c);
@@ -46,13 +48,3 @@ Libft is the first project of the core curriculum of the [42](https://42wolfsbur
     int     ft_lstsize(t_list *lst);
     t_list  *ft_lstlast(t_list *lst);
     void    ft_lstadd_back(t_list **lst, t_list *new);
-
-# The libft library
-As the name suggests, libft_functions contains all the functions I wrote as part of the project libft. In addition to the required functions, it contains a Makefile and a Headerfile which is named libft.h.
-
-    1. Git clone the current repository (you need to generate an SSH Key in advance to be able to git clone) into a directory on your device.
-    2. Go into the directory libft_functions with your terminal.
-    3. Enter the command 'make' in order to create the archive libft.a.
-    4. Copy the headerfile libft.h and the archive libft.a into the directory you'd like to use the library.
-    5. Refer to the library by adding '#include "libft.h"' at the top of the file where your sorce code is written.
-    6. Compile by using the command 'gcc -Wall -Werror -Wextra your_file.c libft.a' and execute.
