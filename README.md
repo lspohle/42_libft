@@ -1,7 +1,7 @@
 # The first project of the core curriculum - libft
 Libft is the first project of the core curriculum of the 42 network. The project is about coding your own C library. It contains various general purpose functions.
 
-## If you're doing the core curriculum at the moment, [Testernette for libft](https://github.com/lspohle/PRIVATE_testernette_42) might be interisting for you.
+## [Testernette for libft](https://github.com/lspohle/PRIVATE_testernette_42) might be interisting for you if you're doing the core at the moment.
 
 ## Part 1: libc functions
     int     ft_isalpha(int c);
