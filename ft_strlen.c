@@ -31,6 +31,7 @@
 
 #include "libft.h"
 
+// Returns the number of characters that precede the terminating NULL
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;

@@ -24,6 +24,9 @@
 
 #include "libft.h"
 
+// Converts str to int representation
+// Returns converted int
+// Returns zero if no valid conversion could be performed
 int	ft_atoi(const char *str)
 {
 	int	i;

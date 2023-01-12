@@ -37,6 +37,11 @@
 
 #include "libft.h"
 
+// Allocates memory for count objects that are size bytes each
+// Takes more time than just calling malloc
+// Allocated memory is filled with bytes of value zero
+// Returns a pointer to the allocated memory
+// Returns a NULL pointer if allocation failed
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;

@@ -22,6 +22,7 @@
 
 #include "libft.h"
 
+// Iterates the list 'lst' and applies 'f' on the content of each node
 void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
 	while (lst != NULL)

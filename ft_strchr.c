@@ -22,20 +22,19 @@
 
 #include "libft.h"
 
+// Locates the first occurrence of c in s
+// The terminating null character is considered to be part of the string
+// Returns a pointer to the located character
+// Returns NULL if the character does not appear in the string
 char	*ft_strchr(const char *s, int c)
 {
-	char			char_c;
-	char			*char_s;
-	size_t			i;
+	int		i;
 
-	char_c = (char) c;
-	char_s = (char *) s;
-	i = 0;
-	while (i <= ft_strlen(s))
-	{
-		if (char_s[i] == char_c)
-			return (&char_s[i]);
-		i++;
-	}
+	i = -1;
+	while (s[++i] != '\0')
+		if (s[i] == (char) c)
+			return (&((char *)s)[i]);
+	if (s[i] == (char) c)
+		return (&((char *)s)[i]);
 	return (NULL);
 }

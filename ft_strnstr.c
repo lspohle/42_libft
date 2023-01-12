@@ -24,9 +24,12 @@
 //        of s2 is returned
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
+// Locates first occurrence of null-terminated 'needle' in 'haystack'
+// Not more than len characters are searched
+// If s2 is an empty string, s1 is returned;
+// If s2 occurs nowhere in s1, NULL is returned;
+// Pointer to the first character of the first occurrence of s2 is returned
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	haystack_len;

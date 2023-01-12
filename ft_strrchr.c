@@ -17,6 +17,10 @@
 
 #include "libft.h"
 
+// Locates the last occurrence of c in s
+// The terminating null character is considered to be part of the string
+// Returns a pointer to the located character
+// Returns NULL if the character does not appear in the string
 char	*ft_strrchr(const char *s, int c)
 {
 	char			*char_s;

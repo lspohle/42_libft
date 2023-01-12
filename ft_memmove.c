@@ -33,6 +33,9 @@
 
 #include "libft.h"
 
+// Copies len bytes from string src to string dst
+// Strings may overlap
+// Returns the original value of dst
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*char_dst;

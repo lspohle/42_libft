@@ -23,6 +23,9 @@
 
 #include "libft.h"
 
+// Locates first occurrence of c (converted to an unsigned char) in s
+// Returns a pointer to the byte located
+// Returns NULL if no such byte exists within n bytes
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*char_s;

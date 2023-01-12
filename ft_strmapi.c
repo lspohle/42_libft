@@ -23,6 +23,10 @@
 
 #include "libft.h"
 
+// Applies ’f’ to each character of ’s’
+// Passing its index as first argument to create new string
+// Returns the string created from the successive applications of ’f’
+// Returns NULL if the allocation fails
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	char			*result;

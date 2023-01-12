@@ -29,6 +29,11 @@
 
 #include "libft.h"
 
+// Iterates 'lst' and applies 'f' on the content of each node
+// Creates new list resulting of successive applications of ’f’
+// ’del’ is used to delete the content of a node if needed
+// Returns the new list
+// Returns NULL if allocation failed
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;

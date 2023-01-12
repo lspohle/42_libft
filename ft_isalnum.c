@@ -21,6 +21,7 @@
 
 #include "libft.h"
 
+// Tests for any character for which isalpha(3) or isdigit(3) is true
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)

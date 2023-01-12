@@ -38,6 +38,9 @@
 
 #include "libft.h"
 
+// Function allocates sufficient memory for a copy of s1, does the copy
+// Returns a pointer to it
+// Returns NULL if insufficient memory is available
 char	*ft_strdup(const char *src)
 {
 	int		i;

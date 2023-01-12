@@ -21,6 +21,11 @@
 
 #include "libft.h"
 
+// Compares the null-terminated strings s1 and s2
+// Compares not more than n characters
+// If s1 == s2, return (0) [return equal to 0]
+// If s1 < s2, return (s1[i] - s2[i]) [return smaller than 0]
+// If s1 > s2, return (s1[i] - s2[i]) [return greater than 0]
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*s1_u;

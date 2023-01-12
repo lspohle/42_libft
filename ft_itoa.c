@@ -85,6 +85,8 @@ static char	*ft_convert_to_string(int n, char *str, int len)
 	return (str);
 }
 
+// Allocates and returns a str representing int
+// Returns NULL if allocation failed
 char	*ft_itoa(int n)
 {
 	char	*str;

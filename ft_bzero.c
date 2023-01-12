@@ -18,11 +18,10 @@
 
 #include "libft.h"
 
+// Writes n zeroed bytes to the string s
+// If n is zero, bzero() does nothing
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*char_s;
-
-	char_s = (unsigned char *) s;
 	while (n-- > 0)
-		char_s[n] = '\0';
+		((char *)s)[n] = '\0';
 }

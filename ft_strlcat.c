@@ -32,6 +32,10 @@
 
 #include "libft.h"
 
+// Concatenates 'dst' and 'src'
+// Takes full size of dst buffer and guarantee NULL-termination if room
+// Returns the initial length of dst plus the length of src
+// If the src and dst strings overlap, the behavior is undefined
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;

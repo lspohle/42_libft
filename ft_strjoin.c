@@ -20,23 +20,26 @@
 
 #include "libft.h"
 
+// Allocates and returns a “fresh” string ending with ’\0’
+// Returns the concatenation of s1 and s2
+// Returns NULL if allocation fails
 char	*ft_strjoin(const char *s1, const char *s2)
 {
+	char	*result;
 	int		i;
 	int		j;
-	char	*output;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	output = (char *) malloc ((ft_strlen(s1)+ft_strlen(s2)+1) * sizeof(char));
-	if (!output)
-		return (0);
+	result = malloc (ft_strlen(s1) + (ft_strlen(s2) + 1) * sizeof(char));
+	if (result == NULL)
+		return (NULL);
 	i = -1;
-	while (s1 != NULL && s1[++i])
-		output[i] = s1[i];
+	while (s1[++i] != '\0')
+		result[i] = s1[i];
 	j = -1;
-	while (s2 != NULL && s2[++j])
-		output[i++] = s2[j];
-	output[i] = '\0';
-	return (output);
+	while (s2[++j] != '\0')
+		result[i++] = s2[j];
+	result[i] = '\0';
+	return (result);
 }

@@ -42,6 +42,10 @@ static int	ft_get_finish(const char *s1, const char *set)
 	return (finish);
 }
 
+// Allocates and returns a copy of 's' without characters specified in set 
+// (in the beginning or the finish)
+// Return values “fresh” trimmed string or a copy of s
+// Returns NULL if allocation fails
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*output;

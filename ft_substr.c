@@ -22,21 +22,31 @@
 
 #include "libft.h"
 
+// Allocates and returns a substring from the string given as argument
+// The substring begins at index start and is of size len
+// Returns the substring
+// Returns NULL if allocation fails
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*sub;
+	size_t	length;
 	size_t	i;
 
-	i = 0;
-	if (ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (ft_strlen(&s[start]) < len)
-		len = ft_strlen(&s[start]);
-	sub = (char *) malloc ((len + 1) * sizeof(char));
-	if (!sub)
+	length = ft_strlen(s);
+	if (len == 0)
 		return (NULL);
-	while (len-- != 0 && start < (unsigned int) ft_strlen(s))
-		sub[i++] = s[start++];
+	if (start >= length)
+		len = 0;
+	if (start < length)
+		length = length - start;
+	if (len > length)
+		len = length;
+	sub = malloc((len + 1) * sizeof(char));
+	if (sub == NULL)
+		return (NULL);
+	i = -1;
+	while (++i < len && s[start] != '\0')
+		sub[i] = s[start++];
 	sub[i] = '\0';
 	return (sub);
 }

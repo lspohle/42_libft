@@ -6,7 +6,8 @@ SRCS		= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			  ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 			  ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 			  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-			  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+			  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+			  ft_printf.c get_next_line_bonus.c
 
 BSRCS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 			  ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
@@ -15,9 +16,7 @@ OBJS		= ${SRCS:.c=.o}
 
 BOBJS		= ${BSRCS:.c=.o}
 
-GCC			= gcc
-
-CFLAGS		= -Wall -Wextra -Werror
+GCCW		= gcc -Wall -Wextra -Werror
 
 AR			= ar -rc
 
@@ -27,10 +26,10 @@ ${NAME}:	${OBJS}
 			${AR} ${NAME} ${OBJS}
 
 ${OBJS}:	${SRCS}
-			${GCC} ${CFLAGS} -c ${SRCS}
+			${GCCW} ${} -c ${SRCS}
 
 ${BOBJS}:	${BSRCS}
-			${GCC} ${CFLAGS} -c ${BSRCS} ${SRCS}
+			${GCCW} -c ${BSRCS} ${SRCS}
 
 all:		${NAME}
 

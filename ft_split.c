@@ -71,6 +71,11 @@ static char	**ft_split_string(char **result, const char *s, char c)
 	return (result);
 }
 
+// Allocates and returns an array of strings obtained by splitting ’s’ using 
+// the character ’c’ as a delimiter
+// The array must end with a NULL pointer
+// Returns array of new strings resulting from the split
+// Returns NULL if allocation fails
 char	**ft_split(const char *s, char c)
 {
 	char	**result;

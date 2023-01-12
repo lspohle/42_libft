@@ -30,6 +30,10 @@
 
 #include "libft.h"
 
+// Copies up to dstsize - 1 characters from 'src' to 'dst',
+// Takes full size of dst buffer and guarantee NULL-termination if room
+// Returns len of src
+// If the src and dst strings overlap, the behavior is undefined
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t		i;
