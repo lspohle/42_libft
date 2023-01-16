@@ -13,7 +13,7 @@
 // Note
 //     Prototyped as int atoi(const char *str)
 //     -> #include <stdlib.h>
-//     -> converts the initial portion of the string pointed to by str to
+//     -> converts the initial portion of str to
 //        int representation
 //     -> uses the current locale (!= atoi_l())
 //     -> returns the converted int (if no valid conversion could be performed,
